@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="container text-center">
+    <div class="card">
+        <div class="card-body">
+            <h1>Configuración de Horarios</h1>
+            <form action="/save_schedules" method="post">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="start_time" class="form-label">Hora de Inicio</label>
+                        <input type="time" class="form-control" id="start_time" name="start_time" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="end_time" class="form-label">Hora de Fin</label>
+                        <input type="time" class="form-control" id="end_time" name="end_time" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="text-align: left">
+                        <label for="monday" class="form-label">Lunes</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="monday" name="monday" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="text-align: left">
+                        <label for="tuesday" class="form-label">Martes</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="tuesday" name="tuesday" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="text-align: left">
+                        <label for="wednesday" class="form-label">Miércoles</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="wednesday" name="wednesday" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="text-align: left">
+                        <label for="thursday" class="form-label">Jueves</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="thursday" name="thursday" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3" style="text-align: left">
+                        <label for="friday" class="form-label">Viernes</label>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="friday" name="friday" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

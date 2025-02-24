@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container text-center">
+    <div class="card mb-12">
+        <div class="row g-0">
+            <div class="col-md-8">
+                <img src="{{ url_for('static', filename='images/principal.jpg') }}" class="img-fluid rounded-start"
+                     alt="principal">
+            </div>
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h3 class="card-title">Bienvenido</h3>
+                    <p class="card-text"><i>Este es un sistema para el control de Pico y Placa</i></p>
+                    <p class="card-text">El Pico y Placa es una medida implementada en varias ciudades para reducir la
+                        congestión vehicular.
+                        Consiste en restringir el tránsito de vehículos en ciertas horas del día según el último número
+                        de su placa.</p>
+
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-success">
+                <p class="card-text" style="margin-bottom: 0"><small class="text-body-secondary">Desarrollado por: Andrea González</small>
+                </p>
+                <p class="card-text"><small class="text-body-secondary">©Todos los derechos reservados</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
