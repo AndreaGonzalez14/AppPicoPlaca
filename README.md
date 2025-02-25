@@ -50,3 +50,8 @@ SECRET_KEY=llave_secreta
 ### Validación de Placa
 
 ![Validate Plate](static/images/validate_plate.png)
+
+
+### Información Personal
+
+![About Page](static/images/about_page.png)
